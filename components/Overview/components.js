@@ -6,6 +6,8 @@ import {
   AlertContainer,
   Avatar,
   AvatarBatch,
+  Badge,
+  Box,
   Button,
   Checkbox,
   CircularLoader,
@@ -21,6 +23,7 @@ import {
   TabHeader,
   Tabs,
   Textbox,
+  useDebounce,
 } from "@codepurse/navix";
 import { Col, Row } from "react-bootstrap";
 export default function components() {
@@ -39,7 +42,7 @@ export default function components() {
     <Row className="rowComponents">
       <AlertContainer />
       <Col lg={12}>
-        <p className="pHeader">Get Started</p>
+        <p className="pHeader">Components</p>
         <p className="pHeaderSub">
           This component are dedicated for Navix Health Hub. It's a collection
           of interface elements that can be reused across the system. If you
@@ -198,7 +201,7 @@ export default function components() {
       </Col>
       <Col lg={4}>
         <div className="box align-items-center justify-content-center d-flex">
-          <Button type="sucess" onClick={notify}>
+          <Button type="sucess" onClick={useDebounce((e) => notify(), 50)}>
             Click me 👈
           </Button>
         </div>
@@ -252,6 +255,37 @@ export default function components() {
           <Header type={4}>List</Header>
           <Paragraph style={{ color: "#757575" }}>
             A list can be used to display content related to a single subject
+          </Paragraph>
+        </div>
+      </Col>
+      <Col lg={4}>
+        <div className="box align-items-center justify-content-center d-flex">
+          <Badge type="primary">Primary</Badge>
+        </div>
+        <div className="divName">
+          <Header type={4}>Badge</Header>
+          <Paragraph style={{ color: "#757575" }}>
+            Used for buttons, numbers or status markers next to icons.
+          </Paragraph>
+        </div>
+      </Col>
+      <Col lg={4}>
+        <div className="box align-items-center justify-content-center d-flex">
+          <Box
+            width="100%"
+            height="100%"
+            borderRadius="5px"
+            style={{
+              background: "linear-gradient(to right, #00416a, #e4e5e6)",
+            }}
+          >
+            <Paragraph color="white">Sample Paragraph</Paragraph>
+          </Box>
+        </div>
+        <div className="divName">
+          <Header type={4}>Box</Header>
+          <Paragraph style={{ color: "#757575" }}>
+            Box is like wrapper of your elements.
           </Paragraph>
         </div>
       </Col>

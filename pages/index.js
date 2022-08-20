@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Components from "../components/Overview/components";
+import Hooks from "../components/Overview/hooks";
 export default function index() {
-  const [active, setActive] = useState(1);
+  const [active, setActive] = useState(4);
   return (
     <Container className="divOverview">
       <Row>
@@ -94,6 +95,8 @@ export default function index() {
       {(() => {
         if (active === 3) {
           return <Components />;
+        } else if (active === 4) {
+          return <Hooks />;
         }
       })()}
     </Container>
