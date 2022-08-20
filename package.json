@@ -1,0 +1,36 @@
+{
+  "name": "Navix-Framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@codepurse/navix": "0.0.7-alpha.9",
+    "bootstrap": "^4.6.0",
+    "draft-js": "^0.11.7",
+    "next": "11.1.0",
+    "react": "^17.0.2",
+    "react-bootstrap": "^2.0.0-beta.6",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
+    "sass": "^1.38.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codepurse/Navix-Framework.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codepurse/Navix-Framework/issues"
+  },
+  "homepage": "https://github.com/codepurse/Navix-Framework#readme"
+}
