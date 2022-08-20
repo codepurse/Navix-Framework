@@ -22,16 +22,5 @@
     "start": "next start",
     "lint": "next lint",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/codepurse/Navix-Framework.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/codepurse/Navix-Framework/issues"
-  },
-  "homepage": "https://github.com/codepurse/Navix-Framework#readme"
+  }
 }
