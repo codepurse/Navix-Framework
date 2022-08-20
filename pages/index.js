@@ -28,7 +28,7 @@ export default function index() {
                   color: active === 1 ? "#05137C" : "",
                 }}
               >
-                Get Started
+                Get Starte
               </a>
             </li>
             <li
