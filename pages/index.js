@@ -28,7 +28,7 @@ export default function index() {
                   color: active === 1 ? "#05137C" : "",
                 }}
               >
-                Get Starte
+                Get Started
               </a>
             </li>
             <li
@@ -59,11 +59,43 @@ export default function index() {
                 Components
               </a>
             </li>
+            <li
+              onClick={(e) => {
+                setActive(4);
+              }}
+            >
+              <a
+                style={{
+                  borderBottom: active === 4 ? "2px solid #05137C" : "",
+                  color: active === 4 ? "#05137C" : "",
+                }}
+              >
+                Hooks
+              </a>
+            </li>
+            <li
+              onClick={(e) => {
+                setActive(5);
+              }}
+            >
+              <a
+                style={{
+                  borderBottom: active === 5 ? "2px solid #05137C" : "",
+                  color: active === 5 ? "#05137C" : "",
+                }}
+              >
+                Classes
+              </a>
+            </li>
           </ul>
           <hr style={{ marginTop: "-1px" }} />
         </Col>
       </Row>
-      <Components />
+      {(() => {
+        if (active === 3) {
+          return <Components />;
+        }
+      })()}
     </Container>
   );
 }

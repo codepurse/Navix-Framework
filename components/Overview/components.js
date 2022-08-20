@@ -10,14 +10,31 @@ import {
   Checkbox,
   CircularLoader,
   Header,
+  List,
+  ListItem,
   Paragraph,
   Radio,
   RadioGroup,
+  SegmentedButton,
+  Switch,
+  TabContent,
+  TabHeader,
+  Tabs,
   Textbox,
 } from "@codepurse/navix";
 import { Col, Row } from "react-bootstrap";
 export default function components() {
   const notify = () => Alert.success("Sample Alert! Letss goo!");
+  const segmentedArray = [
+    {
+      id: "one",
+      label: "Button One",
+    },
+    {
+      id: "two",
+      label: "Button Two",
+    },
+  ];
   return (
     <Row className="rowComponents">
       <AlertContainer />
@@ -34,7 +51,10 @@ export default function components() {
           <Button type="primary">Button</Button>
         </div>
         <div className="divName">
-          <p></p>
+          <Header type={4}>Button</Header>
+          <Paragraph style={{ color: "#757575" }}>
+            With our design system you can add a button with single line of code
+          </Paragraph>
         </div>
       </Col>
       <Col lg={4}>
@@ -51,6 +71,32 @@ export default function components() {
             </AvatarBatch>
           </div>
         </div>
+        <div className="divName">
+          <Header type={4}>Avatar</Header>
+          <Paragraph style={{ color: "#757575" }}>
+            Used to display an avatar or brand
+          </Paragraph>
+        </div>
+      </Col>
+      <Col lg={4}>
+        <div className="box align-items-center justify-content-center d-flex">
+          <Tabs defaultKey="3">
+            <TabHeader label="Tab One" id="3"></TabHeader>
+            <TabHeader label="Tab Two" id="4"></TabHeader>
+            <TabContent id="3">
+              <Paragraph style={{ marginLeft: "25px" }}>🤩</Paragraph>
+            </TabContent>
+            <TabContent id="4">
+              <Paragraph style={{ marginLeft: "25px" }}>😁</Paragraph>
+            </TabContent>
+          </Tabs>
+        </div>
+        <div className="divName">
+          <Header type={4}>Tabs</Header>
+          <Paragraph style={{ color: "#757575" }}>
+            Tabs make it easy to switch between different views
+          </Paragraph>
+        </div>
       </Col>
       <Col lg={4}>
         <div className="box align-items-center justify-content-center d-flex">
@@ -59,21 +105,46 @@ export default function components() {
             <Radio value="2" label=""></Radio>
           </RadioGroup>
         </div>
+        <div className="divName">
+          <Header type={4}>Radio</Header>
+          <Paragraph style={{ color: "#757575" }}>
+            Radio buttons allow the user to select one option from a set
+          </Paragraph>
+        </div>
       </Col>
       <Col lg={4}>
         <div className="box align-items-center justify-content-center d-flex">
           <Textbox />
+        </div>
+        <div className="divName">
+          <Header type={4}>Textbox</Header>
+          <Paragraph style={{ color: "#757575" }}>
+            Instead of HTML native controls, input, textarea
+          </Paragraph>
         </div>
       </Col>
       <Col lg={4}>
         <div className="box align-items-center justify-content-center d-flex">
           <CircularLoader size="lg" />
         </div>
+        <div className="divName">
+          <Header type={4}>Circular progressbar</Header>
+          <Paragraph style={{ color: "#757575" }}>
+            A circular progress for displaying loading state of a page or a
+            section
+          </Paragraph>
+        </div>
       </Col>
       <Col lg={4}>
         <div className="box align-items-center justify-content-center d-flex">
           <Checkbox />
           <Checkbox />
+        </div>
+        <div className="divName">
+          <Header type={4}>Checkbox</Header>
+          <Paragraph style={{ color: "#757575" }}>
+            Used for multiple data selection, support grouping
+          </Paragraph>
         </div>
       </Col>
       <Col lg={4}>
@@ -82,12 +153,24 @@ export default function components() {
             Navix Hub
           </Header>
         </div>
+        <div className="divName">
+          <Header type={4}>Header</Header>
+          <Paragraph style={{ color: "#757575" }}>
+            Header component with multiple design built in.
+          </Paragraph>
+        </div>
       </Col>
       <Col lg={4}>
         <div className="box align-items-center justify-content-center d-flex">
           <Paragraph style={{ textAlign: "center" }}>
             Using this component, you can render any element like sub, sup ,
             header and etc..
+          </Paragraph>
+        </div>
+        <div className="divName">
+          <Header type={4}>Paragraph</Header>
+          <Paragraph style={{ color: "#757575" }}>
+            A text which you can render a another text element.
           </Paragraph>
         </div>
       </Col>
@@ -106,6 +189,12 @@ export default function components() {
             </AccordionItem>
           </Accordion>
         </div>
+        <div className="divName">
+          <Header type={4}>Accordion</Header>
+          <Paragraph style={{ color: "#757575" }}>
+            A content panel that supports folding panels
+          </Paragraph>
+        </div>
       </Col>
       <Col lg={4}>
         <div className="box align-items-center justify-content-center d-flex">
@@ -114,7 +203,56 @@ export default function components() {
           </Button>
         </div>
         <div className="divName">
-          <p></p>
+          <Header type={4}>Alert / Toast</Header>
+          <Paragraph style={{ color: "#757575" }}>
+            Alert box that are stackable with multiple designs
+          </Paragraph>
+        </div>
+      </Col>
+      <Col lg={4}>
+        <div className="box align-items-center justify-content-center d-flex">
+          <Switch />
+        </div>
+        <div className="divName">
+          <Header type={4}>Switch</Header>
+          <Paragraph style={{ color: "#757575" }}>
+            Used to select between two values
+          </Paragraph>
+        </div>
+      </Col>
+      <Col lg={4}>
+        <div className="box align-items-center justify-content-center d-flex">
+          <SegmentedButton
+            value={segmentedArray}
+            selected={2}
+            onSelect={(e) => {
+              console.log(e);
+            }}
+          />
+        </div>
+        <div className="divName">
+          <Header type={4}>Segmented button</Header>
+          <Paragraph style={{ color: "#757575" }}>
+            A component to group multple buttons
+          </Paragraph>
+        </div>
+      </Col>
+      <Col lg={4}>
+        <div className="box align-items-center justify-content-center d-flex">
+          <div style={{ marginLeft: "10px" }}>
+            <List>
+              <ListItem
+                label="Landing page design"
+                subLabel="This is a sample sub header"
+              ></ListItem>
+            </List>
+          </div>
+        </div>
+        <div className="divName">
+          <Header type={4}>List</Header>
+          <Paragraph style={{ color: "#757575" }}>
+            A list can be used to display content related to a single subject
+          </Paragraph>
         </div>
       </Col>
     </Row>
